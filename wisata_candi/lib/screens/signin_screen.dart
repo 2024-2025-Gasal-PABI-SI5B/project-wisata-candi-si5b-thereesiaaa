@@ -43,9 +43,27 @@ class SigninScreen extends StatelessWidget {
                 hintText: 'Masukkan kata sandi',
                 border: const OutlineInputBorder(),
                 errorText: _errorText.isNotEmpty ? _errorText : null,
+                suffixIcon: IconButton(
+                  onPressed: (){}, 
+                  icon: Icon(
+                    _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                  ),
+                  ),
               ),
+              obsecureText : _obscurePassword,
             ),
             //todo 7 : buat elevatedbutton u sign in
+            const SizedBox(height: 20,),
+            ElevatedButton(
+              onPressed: () {}, 
+              child: const Text('Sign In'), 
+            ),
+            //TODO 8 : Pasang textbutton u sign up
+            const SizedBox(height: 10,),
+            TextButton(
+              onPressed: () {}, 
+              child: const Text('Belum punya akun? Daftar di sini'),
+            ),
           ],
         )),
       ),
